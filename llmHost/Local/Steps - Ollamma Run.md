@@ -1,6 +1,6 @@
 Steps - 
 
   # Install Ollama from ollama.com, then:
-  ollama pull llama3.2
-  ollama serve
-  ollama run llama3.2
+  1. ollama pull llama3.2
+  2. ollama serve
+  3. ollama run llama3.2
