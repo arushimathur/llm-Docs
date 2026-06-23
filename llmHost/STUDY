@@ -1,0 +1,468 @@
+❯ Give me Combine Study Plan for this week. Since I am short of Time, But Want to learn the best . What would u suggest. I am also
+  having my office daily.
+
+● Given office daily, I'm assuming 1.5 hours on weekdays, 4 hours on weekends. Today is Monday June 23. Here's the plan:
+
+  ---
+  Ground Rule
+
+  No coding this week. Concepts + vocabulary first. You need to talk about these in an interview, not implement them. Hands-on comes
+  later.
+
+  ---
+  Day-by-Day Plan
+
+  Monday June 23 — Neural + Transformer Architecture
+
+  Tonight: 1.5 hrs
+
+  ┌────────┬─────────────────────────────────────────────────────────────────────────────────────┐
+  │  Time  │                                        Task                                         │
+  ├────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Watch 3Blue1Brown "But what is a Neural Network?" (YouTube, Episode 1)              │
+  ├────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ 40 min │ Read "The Illustrated Transformer" — jalammar.github.io (just read, don't memorize) │
+  ├────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ 20 min │ Write in your own words: What is attention? What is a token? What is an embedding?  │
+  └────────┴─────────────────────────────────────────────────────────────────────────────────────┘
+
+  Goal tonight: Be able to say "A Transformer processes text by breaking it into tokens, converting them to embeddings, and using
+  attention to understand relationships between words."
+
+  ---
+  Tuesday June 24 — Transformer Deep Dive + LLM Basics
+
+  Tonight: 1.5 hrs
+
+  ┌────────┬────────────────────────────────────────────────────────────────────────┐
+  │  Time  │                                  Task                                  │
+  ├────────┼────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Watch "Andrej Karpathy — Intro to LLMs" on YouTube (first 30 min only) │
+  ├────────┼────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Read: Encoder vs Decoder vs Encoder-Decoder — when each is used        │
+  ├────────┼────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Understand: GPT = Decoder only, BERT = Encoder only, T5 = Both         │
+  └────────┴────────────────────────────────────────────────────────────────────────┘
+
+  Goal tonight: Understand why GPT-style models are used for generation and BERT-style for classification/search.
+
+  ---
+  Wednesday June 25 — Fine-Tuning LLMs
+
+  Tonight: 1.5 hrs
+
+  ┌───────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Time  │                                                         Task                                                         │
+  ├───────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 20    │ Read: "When to fine-tune vs RAG" — search this exact phrase on Google, read top 2 results                            │
+  │ min   │                                                                                                                      │
+  ├───────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 40    │ Watch: "Fine-tuning LLMs explained" by Prompt Engineering channel (YouTube)                                          │
+  │ min   │                                                                                                                      │
+  ├───────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 30    │ Understand LoRA in plain English: "Instead of retraining 7 billion weights, LoRA trains only 1 million adapter       │
+  │ min   │ weights and freezes the rest"                                                                                        │
+  └───────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  Key interview answer to prepare:
+
+  ▎ "I would choose RAG when the knowledge changes frequently. I would choose fine-tuning when I need the model to learn a specific
+  ▎ style, tone, or domain behavior that prompt engineering alone can't achieve."
+
+  ---
+  Thursday June 26 — Agentic Architecture
+
+  Tonight: 1.5 hrs
+
+  ┌────────┬───────────────────────────────────────────────────────────────────────────────────┐
+  │  Time  │                                       Task                                        │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────┤
+  │ 40 min │ Watch: Andrew Ng "Agentic AI Design Patterns" on DeepLearning.AI (free, ~35 mins) │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Understand ReAct loop: Thought → Action → Observation → repeat                    │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────┤
+  │ 20 min │ Read about: LangGraph vs AutoGen vs CrewAI (just the "what is it" sections)       │
+  └────────┴───────────────────────────────────────────────────────────────────────────────────┘
+
+  Goal tonight: Be able to draw this on a whiteboard:
+  User Query
+      ↓
+  Agent (LLM as brain)
+      ↓ decides
+  Tool Call (Search / DB / API / Code)
+      ↓ result back
+  Agent reasons again
+      ↓
+  Final Answer
+
+  ---
+  Friday June 27 — Hosting LLM Models
+
+  Tonight: 1.5 hrs
+
+  ┌────────┬───────────────────────────────────────────────────────────────────────────────────────┐
+  │  Time  │                                         Task                                          │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+  │ 20 min │ Install Ollama (ollama.com) and run ollama run llama3.2 — just experience it          │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+  │ 30 min │ Read: API-based vs self-hosted tradeoffs (data privacy, cost, latency)                │
+  ├────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+  │ 40 min │ Understand vLLM concept: "Why is serving LLMs hard? GPU memory, batching, throughput" │
+  └────────┴───────────────────────────────────────────────────────────────────────────────────────┘
+
+  Key interview point: "At enterprise scale, we'd evaluate self-hosting on Vertex AI or using managed APIs like Gemini on GCP,
+  balancing data residency requirements with cost."
+
+  ---
+  Saturday June 28 — Consolidation Day
+
+  4 hours
+
+  ┌──────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Time │                                                          Task                                                          │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Re-read your own notes from Mon–Fri                                                                                    │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Watch: "RAG from scratch" — any 20 min YouTube video, understand the full pipeline                                     │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Prepare answers to these 5 questions (write them out):                                                                 │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │      │ 1. Explain Transformer architecture in 2 minutes                                                                       │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │      │ 2. When would you fine-tune vs use RAG?                                                                                │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │      │ 3. What is an AI agent and how does it work?                                                                           │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │      │ 4. How would you host an LLM in production?                                                                            │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │      │ 5. How does your Spark/Kafka experience help here?                                                                     │
+  ├──────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Connect the dots — draw the full AI platform: Data ingestion (Kafka) → Processing (Spark) → Embeddings → Vector DB →   │
+  │      │ RAG/Agent → LLM → User                                                                                                 │
+  └──────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ---
+  Sunday June 29 — Mock Interview Prep
+
+  4 hours
+
+  ┌──────┬───────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Time │                                           Task                                            │
+  ├──────┼───────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Read the JD again — map every bullet point to something you now know                      │
+  ├──────┼───────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Prepare your "tell me about yourself" anchored to this role                               │
+  ├──────┼───────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Practice saying your answers out loud (record yourself if possible)                       │
+  ├──────┼───────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 hr │ Read about American Express's AI initiatives — Google "American Express AI strategy 2024" │
+  └──────┴───────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ---
+  The One Diagram to Know Cold
+
+          ┌─────────────────────────────────────┐
+          │         Enterprise Data Sources      │
+          │  HR | Security | Devices | Collab   │
+          └──────────────┬──────────────────────┘
+                         │ Kafka (streaming)
+                         ↓
+                 ┌───────────────┐
+                 │  Spark (ETL)  │
+                 └───────┬───────┘
+                         │
+            ┌────────────┴────────────┐
+            ↓                         ↓
+     ┌─────────────┐          ┌──────────────┐
+     │  Vector DB  │          │  Data Warehouse│
+     │ (embeddings)│          │  (analytics)  │
+     └──────┬──────┘          └──────────────┘
+            │
+            ↓
+     ┌─────────────┐
+     │  RAG / Agent│ ← Fine-tuned or prompted LLM
+     └──────┬──────┘
+            │
+            ↓
+     Colleague Experience Dashboard / Chatbot
+
+  This diagram tells the whole story of the role — and you already own the top half of it.
+
+  ---
+  Want me to prepare mock interview Q&A for each of the 5 topics?
+
+✻ Churned for 38s
+
+❯ I am thinking that If I practically build project , then its better practical Knowledge is best.
+
+● 100% right call. Practical beats theory every time — and you'll have a real project to talk about in the interview.
+
+  Here's the plan: build ONE project that covers all 5 topics.
+
+  ---
+  The Project: "Digital Workplace Assistant"
+
+  An AI agent that answers employee IT/HR questions using company documents — exactly what this role builds at Amex.
+
+  What it will do:
+  User asks: "What is the leave policy for new joiners?"
+           ↓
+  Agent searches company PDF/docs (RAG)
+           ↓
+  LLM generates answer using retrieved context
+           ↓
+  If it needs more info → calls a tool (search, calculator)
+           ↓
+  Returns final answer
+
+  This single project covers all 5 manager topics:
+
+  ┌──────────────────────────┬─────────────────────────────────────────────────────────────┐
+  │      Manager Topic       │                 How this project covers it                  │
+  ├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Transformer Architecture │ The LLM and embedding model are both Transformers           │
+  ├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Neural Architecture      │ You'll understand what's running under the hood             │
+  ├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Fine-Tuning LLMs         │ You'll see WHY the base model needs domain context (RAG/FT) │
+  ├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Agentic Architecture     │ Agent loop with tool use                                    │
+  ├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Hosting LLM Models       │ Ollama running locally on your machine                      │
+  └──────────────────────────┴─────────────────────────────────────────────────────────────┘
+
+  ---
+  Tech Stack (all free, all local)
+
+  ┌───────────────────────┬────────────────────┬───────────────────────────────────┐
+  │         Tool          │      Purpose       │              Install              │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ Python                │ Language           │ Already have it?                  │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ Ollama                │ Host LLM locally   │ ollama.com                        │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ Llama 3.2 (3B)        │ The LLM brain      │ ollama pull llama3.2              │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ LangChain             │ Connect everything │ pip install langchain             │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ ChromaDB              │ Vector database    │ pip install chromadb              │
+  ├───────────────────────┼────────────────────┼───────────────────────────────────┤
+  │ sentence-transformers │ Create embeddings  │ pip install sentence-transformers │
+  └───────────────────────┴────────────────────┴───────────────────────────────────┘
+
+  ---
+  Day-by-Day Build Plan
+
+  Monday — Setup + Run your first LLM locally
+
+  1.5 hrs
+
+  # Install Ollama from ollama.com, then:
+  ollama pull llama3.2
+  ollama run llama3.2
+  # Type a question. Watch it answer. You're hosting an LLM.
+
+  Then install Python deps:
+  pip install langchain langchain-community chromadb sentence-transformers ollama
+
+  Tonight's win: LLM running on YOUR machine. Topic 5 (Hosting) — done.
+
+  ---
+  Tuesday — Load Documents + Create Embeddings
+
+  1.5 hrs
+
+  Create ingest.py:
+  from langchain_community.document_loaders import PyPDFLoader
+  from langchain.text_splitter import RecursiveCharacterTextSplitter
+  from langchain_community.embeddings import HuggingFaceEmbeddings
+  from langchain_community.vectorstores import Chroma
+
+  # Load any PDF (use a company HR policy or any document)
+  loader = PyPDFLoader("hr_policy.pdf")
+  docs = loader.load()
+
+  # Split into chunks
+  splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+  chunks = splitter.split_documents(docs)
+
+  # Create embeddings and store in ChromaDB
+  embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+  vectordb = Chroma.from_documents(chunks, embeddings, persist_directory="./db")
+  print(f"Stored {len(chunks)} chunks")
+
+  Tonight's win: You understand embeddings + vector DB. Transformer Architecture in action.
+
+  ---
+  Wednesday — Build the RAG Pipeline
+
+  1.5 hrs
+
+  Create rag.py:
+  from langchain_community.llms import Ollama
+  from langchain_community.embeddings import HuggingFaceEmbeddings
+  from langchain_community.vectorstores import Chroma
+  from langchain.chains import RetrievalQA
+
+  # Load vector DB
+  embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+  vectordb = Chroma(persist_directory="./db", embedding_function=embeddings)
+
+  # Connect to local LLM
+  llm = Ollama(model="llama3.2")
+
+  # Build RAG chain
+  qa_chain = RetrievalQA.from_chain_type(
+      llm=llm,
+      retriever=vectordb.as_retriever(search_kwargs={"k": 3})
+  )
+
+  # Ask a question
+  question = "What is the leave policy?"
+  answer = qa_chain.invoke(question)
+  print(answer)
+
+  Tonight's win: Full RAG working. You can now explain the entire pipeline.
+
+  ---
+  Thursday — Add Agentic Behavior (Tool Use)
+
+  1.5 hrs
+
+  Upgrade to agent.py — give the LLM tools it can choose to call:
+  from langchain_community.llms import Ollama
+  from langchain.agents import AgentExecutor, create_react_agent
+  from langchain.tools import Tool
+  from langchain import hub
+
+  llm = Ollama(model="llama3.2")
+
+  # Tool 1: Search your documents
+  def search_docs(query):
+      return qa_chain.invoke(query)["result"]
+
+  # Tool 2: Simple calculator
+  def calculate(expression):
+      return str(eval(expression))
+
+  tools = [
+      Tool(name="DocumentSearch", func=search_docs,
+           description="Search HR and IT policy documents"),
+      Tool(name="Calculator", func=calculate,
+           description="Perform calculations"),
+  ]
+
+  # ReAct agent — this is the agentic loop
+  prompt = hub.pull("hwchase17/react")
+  agent = create_react_agent(llm, tools, prompt)
+  executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+
+  result = executor.invoke({"input": "What is the IT helpdesk number?"})
+  print(result["output"])
+
+  Run it with verbose=True — watch the agent think step by step. That IS the ReAct loop.
+
+  Tonight's win: Agentic Architecture — seen, understood, built.
+
+  ---
+  Friday — Add a Simple UI
+
+  1.5 hrs
+
+  pip install streamlit
+
+  Create app.py:
+  import streamlit as st
+  from agent import executor
+
+  st.title("Digital Workplace Assistant")
+  st.caption("Powered by Llama 3.2 + RAG + LangChain")
+
+  question = st.text_input("Ask anything about company policies:")
+
+  if question:
+      with st.spinner("Thinking..."):
+          result = executor.invoke({"input": question})
+          st.write(result["output"])
+
+  streamlit run app.py
+
+  Tonight's win: You have a working product with a UI. Screenshot this for the interview.
+
+  ---
+  Saturday — Fine-Tuning Awareness + Polish
+
+  4 hrs
+
+  You won't actually fine-tune (needs GPU + days). Instead:
+
+  1. Understand it practically (1 hr):
+    - Notice your RAG answers aren't perfect?
+    - That's exactly when fine-tuning helps
+    - Read: what LoRA does in 20 minutes — huggingface.co/docs/peft
+  2. Add a second document type (1 hr):
+    - Add a CSV of IT tickets or employee FAQs
+    - See how the retrieval changes
+  3. Write your README (1 hr):
+    - Architecture diagram
+    - What each component does
+    - Put this on GitHub
+  4. Prepare interview story (1 hr):
+    - "I built a RAG-based workplace assistant using Ollama, LangChain, and ChromaDB..."
+    - Map each component to the manager's 5 topics
+
+  ---
+  Sunday — Interview Prep Around the Project
+
+  4 hrs
+
+  Practice answering these using YOUR project as the example:
+
+  - "Walk me through your architecture" → explain your diagram
+  - "Why did you choose RAG over fine-tuning?" → answer from experience
+  - "How would you scale this to 60,000 employees?" → Kafka for ingestion, Spark for processing, replace ChromaDB with
+  Pinecone/Vertex AI Vector Search, vLLM for serving
+  - "How does your Big Data experience apply?" → Kafka replaces your manual PDF loader, Spark replaces the text splitter at scale
+
+  ---
+  What You'll Have by Sunday
+
+  1. A working GitHub project
+  2. Real experience with all 5 manager topics
+  3. Concrete answers for every interview question
+  4. The ability to draw and explain the architecture from memory
+
+  ---
+  Do you have Python installed? Should I help you get the environment set up first?
+
+✻ Worked for 48s
+
+※ recap: You're preparing for an American Express AI/ML Platform interview by building a hands-on Digital Workplace Assistant project
+  covering all 5 manager topics. Next step: install Ollama and run your first local LLM tonight. (disable recaps in /config)
+
+❯ can u store this chat somewhere, so that I can start from here next time.
+
+● Let me check what's already saved and then store everything from this conversation.
+
+  Recalled 2 memories (ctrl+o to expand)
+
+● Now I'll save the AmEx AI/ML interview prep context as a new memory and update the index.
+
+  Wrote 2 memories (ctrl+o to expand)
+
+● Saved. Next time you start a conversation, just say "continue my AmEx AI/ML interview prep" and I'll pick up exactly where we left
+  off — including the day-by-day project plan and which task is next.
+
+  Here's what's stored:
+  - The role details (AmEx Digital Workplace AI/ML)
+  - The 5 manager topics you need to cover
+  - The complete project plan ("Digital Workplace Assistant" using Ollama + LangChain + ChromaDB)
+  - Day-by-day build schedule (Jun 23–29)
+  - Your current status: environment not yet set up — Monday's task is installing Ollama and running Llama 3.2
+
+  Start tonight with:
+  # Step 1: Go to ollama.com and install Ollama
+  # Step 2: Open terminal and run:
+  ollama pull llama3.2
+  ollama run llama3.2
+  # Then just chat with it — you're hosting an LLM locally
